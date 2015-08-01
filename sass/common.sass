@@ -1,0 +1,253 @@
+@import reset
+@import lib/mixins
+@import compass
+// @import icon-content-el/*.png
+
+// icons
+// $icon-content-el-sprite-dimensions: true
+// @include all-icon-content-el-sprites
+
+// fonts
+$default-fonts: Arial, sans-serif
++font("Museo Sans 300", MuseoSans-300)
++font("Museo Sans 500", MuseoSans-500)
++font("Museo Sans 700", MuseoSans-700)
++font("Museo Sans 900", MuseoSans-900)
++font("Museo Slab 500", MuseoSlab-500)
++font("Myriad Pro Regular", MyriadPro-Regular)
+$sans-300: "Museo Sans 300", $default-fonts
+$sans-500: "Museo Sans 500", $default-fonts
+$sans-700: "Museo Sans 700", $default-fonts
+$sans-900: "Museo Sans 900", $default-fonts
+$slab-500: "Museo Slab 500", $default-fonts
+$myriad: "Myriad Pro Regular", $default-fonts
+
+
+// colors
+$green-dark: #1abc9c
+$green-light: #30c6a5
+
+/*-------------------------------------------------------------------------*/
+/*----------------------------- MAIN STYLES -------------------------------*/
+/*-------------------------------------------------------------------------*/
+a:hover, a:focus
+	text-decoration: none
+	color: inherit
+p
+	a
+		color: $green-light
+svg
+	width: 100%
+	height: 100%
+body
+	margin-bottom: 1500px
+	min-width: 320px
+	font-family: $sans-300
+	font-size: 14px
+	line-height: 1.3
+	letter-spacing: 0.02em
+.header
+	position: relative
+	color: #fff
+	min-height: 100%
+	background-image: url("../img/header-bg.jpg")
+	+cover
+.header__top
+	position: fixed
+	z-index: 1000
+	top: 0
+	left: 0
+	right: 0
+	padding-top: 50px
+	.logo
+		font-family: $sans-500
+		font-size: 30px
+		line-height: 35px
+		letter-spacing: 0
+		span
+			color: $green-dark
+	.sign-btn
+		float: right
+		padding: 0 15px
+		font-size: 16px
+		line-height: 33px
+		letter-spacing: 0
+		border: 1px solid #fff
+		border-radius: 3px
+		background-color: transparent
+		box-sizing: border-box
+	.nav-main
+		float: right
+		margin-right: 15px
+		letter-spacing: 0
+		li
+			display: inline-block
+			margin-left: 15px
+			margin-right: 15px
+			font-size: 16px
+			line-height: 35px
+.header__bot
+	position: absolute
+	top: 40%
+	left: 0
+	right: 0
+	text-align: center
+	p
+		font-family: $sans-500
+		font-size: 16px
+		line-height: 24px
+		letter-spacing: 0.04em
+		text-shadow: 0 1px 7px rgba(7, 7, 7, 0.15)
+	h2
+		margin-top: 15px
+		font-family: $sans-500
+		font-size: 32px
+		line-height: 36px
+		text-shadow: 0 1px 7px rgba(7, 7, 7, 0.15)
+		text-transform: uppercase
+	.start-btn
+		margin-top: 25px
+		padding: 15px 40px
+		font-family: $sans-700
+		font-size: 18px
+		line-height: 30px
+		background-color: $green-light
+		+background-image(linear-gradient(to top, rgba(7, 7, 7, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%))
+		box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1)
+		border-radius: 3px
+.find
+	margin-top: -60px
+	margin-bottom: 80px
+	padding: 20px 30px
+	background-color: #fff
+	border: 1px solid #e0e7ee
+	&__top
+		+pie-clearfix
+		p
+			float: left
+			font-size: 18px
+			color: #78909c
+			line-height: 24px
+			letter-spacing: 0.04em
+			button
+				font-family: $sans-700
+				color: $green-light
+				background-color: transparent
+		.adv-option-btn
+			float: right
+			font-family: $sans-500
+			color: $green-light
+			line-height: 24px
+	&__bot
+		margin-top: 15px
+		+pie-clearfix
+		.selectric-wrapper
+			float: left
+			width: 37%
+			margin-right: 3%
+		.q-search-btn
+			width: 20%
+			height: 40px
+			font-family: $sans-500
+			font-size: 16px
+			color: #fff
+			letter-spacing: 0.08em
+			background-color: $green-light
+			border-radius: 3px
+.search
+	color: #78909c
+	&__img
+		img
+			vertical-align: bottom
+	&__inner
+		margin-top: 25px
+	&-quote
+		font-family: $sans-700
+		font-size: 16px
+	&-title
+		margin-top: 25px
+		margin-bottom: 15px
+		font-family: $sans-700
+		font-size: 24px
+		color: #455a64
+	&-skills
+		margin-left: -10px
+		+pie-clearfix
+		li
+			float: left
+			margin-left: 20px
+			&:before
+				content: ''
+				display: inline-block
+				margin-right: 5px
+				width: 5px
+				height: 5px
+				border-radius: 5px
+				background-color: #78909c
+				vertical-align: 2px
+	&-price
+		margin-top: 35px
+		font-family: $sans-700
+		font-size: 24px
+		color: #455a64
+		line-height: 40px
+		+pie-clearfix
+		&:first-letter
+			font-family: $sans-300
+		p
+			float: left
+			margin-right: 25px
+		.profile-btn
+			float: left
+			width: 115px
+			font-size: 15px
+			color: $green-light
+			border: 2px solid $green-light
+			border-radius: 3px 0 0 3px
+			text-align: center
+		.hire-btn
+			float: left
+			width: 115px
+			font-size: 15px
+			color: #fff
+			border: 2px solid $green-light
+			border-radius: 0 3px 3px 0
+			background-color: $green-light
+			text-align: center
+.work
+	position: relative
+	color: #fff
+	background-color: $green-light
+	+pie-clearfix
+	&__inner
+		position: absolute
+		z-index: 2
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		h2
+			margin-top: 50px
+			font-family: $sans-700
+		p
+			margin-top: 25px
+	.more-link
+		position: absolute
+		z-index: 3
+		bottom: 0
+		left: 0
+		right: 0
+		height: 70px
+		font-size: 20px
+		line-height: 70px
+		background-color: $green-dark
+		a
+			display: block
+	&__img
+		position: relative
+		z-index: 10
+		float: right
+		width: 50%
+		img
+			vertical-align: bottom
+			width: 100%
