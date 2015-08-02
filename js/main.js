@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+// Parallax
+	$('.header').parallax("50%", 0.4);
+
 // Clear placeholder
 	(function() {
 		$('input,textarea').focus(function(){
@@ -18,6 +21,43 @@ $(document).ready(function(){
 	$('.find__top p button, .start-btn').on('click', function(){
 		$(window).scrollTo('#find_bot', {duration: 'slow', offset: -200});
 	});
+
+// Vimeo
+	// Find all Vimeo videos
+	var $allVideos = $("iframe"),
+
+	    // The element that is fluid width
+	    $fluidEl = $(".work__video");
+
+	// Figure out and save aspect ratio for each video
+	$allVideos.each(function() {
+
+	  $(this)
+	    .data('aspectRatio', this.height / this.width)
+
+	    // and remove the hard coded width/height
+	    .removeAttr('height')
+	    .removeAttr('width');
+
+	});
+
+	// When the window is resized
+	$(window).resize(function() {
+
+	  var newWidth = $fluidEl.width();
+
+	  // Resize all videos according to their own aspect ratio
+	  $allVideos.each(function() {
+
+	    var $el = $(this);
+	    $el
+	      .css('width', newWidth)
+	      .css('height', newWidth * $el.data('aspectRatio'));
+
+	  });
+
+	// Kick off one resize to fix all videos on page load
+	}).resize();
 
 // // ScrollTo
 // 	$(function(){

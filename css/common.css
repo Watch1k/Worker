@@ -25,6 +25,14 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 a { color: inherit; }
 
+.reasons-icons-sprite, .reasons-icons-reasons-icon-1, .reasons-icons-reasons-icon-2, .reasons-icons-reasons-icon-3 { background-image: url('../img/reasons-icons.png'); background-repeat: no-repeat; }
+
+.reasons-icons-reasons-icon-1 { background-position: 0 0; height: 25px; width: 19px; }
+
+.reasons-icons-reasons-icon-2 { background-position: 0 -25px; height: 19px; width: 19px; }
+
+.reasons-icons-reasons-icon-3 { background-position: 0 -44px; height: 17px; width: 8px; }
+
 @font-face { font-family: "Museo Sans 300"; src: url("fonts/MuseoSans-300.eot"); src: url("fonts/MuseoSans-300.eot?#iefix") format("embedded-opentype"), url("fonts/MuseoSans-300.woff2") format("woff2"), url("fonts/MuseoSans-300.woff") format("woff"), url("fonts/MuseoSans-300.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "Museo Sans 500"; src: url("fonts/MuseoSans-500.eot"); src: url("fonts/MuseoSans-500.eot?#iefix") format("embedded-opentype"), url("fonts/MuseoSans-500.woff2") format("woff2"), url("fonts/MuseoSans-500.woff") format("woff"), url("fonts/MuseoSans-500.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "Museo Sans 700"; src: url("fonts/MuseoSans-700.eot"); src: url("fonts/MuseoSans-700.eot?#iefix") format("embedded-opentype"), url("fonts/MuseoSans-700.woff2") format("woff2"), url("fonts/MuseoSans-700.woff") format("woff"), url("fonts/MuseoSans-700.ttf") format("truetype"); font-weight: normal; font-style: normal; }
@@ -40,9 +48,11 @@ p a { color: #30c6a5; }
 
 svg { width: 100%; height: 100%; }
 
-body { margin-bottom: 1500px; min-width: 320px; font-family: "Museo Sans 300", Arial, sans-serif; font-size: 14px; line-height: 1.3; letter-spacing: 0.02em; }
+body { min-width: 320px; font-family: "Museo Sans 300", Arial, sans-serif; font-size: 14px; line-height: 1.3; letter-spacing: 0.02em; }
 
-.header { position: relative; color: #fff; min-height: 100%; background-image: url("../img/header-bg.jpg"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.footer { height: 800px; }
+
+.header { position: relative; color: #fff; min-height: 100%; background-image: url("../img/header-bg.jpg"); background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
 .header__top { position: fixed; z-index: 1000; top: 0; left: 0; right: 0; padding-top: 50px; }
 .header__top .logo { font-family: "Museo Sans 500", Arial, sans-serif; font-size: 30px; line-height: 35px; letter-spacing: 0; }
@@ -70,18 +80,18 @@ body { margin-bottom: 1500px; min-width: 320px; font-family: "Museo Sans 300", A
 .search { color: #78909c; }
 .search__img img { vertical-align: bottom; }
 .search__inner { margin-top: 25px; }
-.search-quote { font-family: "Museo Sans 700", Arial, sans-serif; font-size: 16px; }
-.search-title { margin-top: 25px; margin-bottom: 15px; font-family: "Museo Sans 700", Arial, sans-serif; font-size: 24px; color: #455a64; }
-.search-skills { margin-left: -10px; *zoom: 1; }
-.search-skills:after { content: ""; display: table; clear: both; }
-.search-skills li { float: left; margin-left: 20px; }
-.search-skills li:before { content: ""; display: inline-block; margin-right: 5px; width: 5px; height: 5px; border-radius: 5px; background-color: #78909c; vertical-align: 2px; }
-.search-price { margin-top: 35px; font-family: "Museo Sans 700", Arial, sans-serif; font-size: 24px; color: #455a64; line-height: 40px; *zoom: 1; }
-.search-price:after { content: ""; display: table; clear: both; }
-.search-price:first-letter { font-family: "Museo Sans 300", Arial, sans-serif; }
-.search-price p { float: left; margin-right: 25px; }
-.search-price .profile-btn { float: left; width: 115px; font-size: 15px; color: #30c6a5; border: 2px solid #30c6a5; border-radius: 3px 0 0 3px; text-align: center; }
-.search-price .hire-btn { float: left; width: 115px; font-size: 15px; color: #fff; border: 2px solid #30c6a5; border-radius: 0 3px 3px 0; background-color: #30c6a5; text-align: center; }
+.search__quote { font-family: "Museo Sans 700", Arial, sans-serif; font-size: 16px; }
+.search__title { margin-top: 25px; margin-bottom: 15px; font-family: "Museo Sans 700", Arial, sans-serif; font-size: 24px; color: #455a64; }
+.search__skills { margin-left: -10px; *zoom: 1; }
+.search__skills:after { content: ""; display: table; clear: both; }
+.search__skills li { float: left; margin-left: 20px; }
+.search__skills li:before { content: ""; display: inline-block; margin-right: 5px; width: 5px; height: 5px; border-radius: 5px; background-color: #78909c; vertical-align: 2px; }
+.search__price { margin-top: 35px; font-family: "Museo Sans 700", Arial, sans-serif; font-size: 24px; color: #455a64; line-height: 40px; *zoom: 1; }
+.search__price:after { content: ""; display: table; clear: both; }
+.search__price:first-letter { font-family: "Museo Sans 300", Arial, sans-serif; }
+.search__price p { float: left; margin-right: 25px; }
+.search__price .profile-btn { float: left; width: 115px; font-size: 15px; color: #30c6a5; border: 2px solid #30c6a5; border-radius: 3px 0 0 3px; text-align: center; }
+.search__price .hire-btn { float: left; width: 115px; font-size: 15px; color: #fff; border: 2px solid #30c6a5; border-radius: 0 3px 3px 0; background-color: #30c6a5; text-align: center; }
 
 .work { position: relative; color: #fff; background-color: #30c6a5; *zoom: 1; }
 .work:after { content: ""; display: table; clear: both; }
@@ -90,5 +100,54 @@ body { margin-bottom: 1500px; min-width: 320px; font-family: "Museo Sans 300", A
 .work__inner p { margin-top: 25px; }
 .work .more-link { position: absolute; z-index: 3; bottom: 0; left: 0; right: 0; height: 70px; font-size: 20px; line-height: 70px; background-color: #1abc9c; }
 .work .more-link a { display: block; }
-.work__img { position: relative; z-index: 10; float: right; width: 50%; }
-.work__img img { vertical-align: bottom; width: 100%; }
+.work__video { position: relative; z-index: 10; float: right; width: 50%; }
+.work__video iframe { vertical-align: bottom; }
+
+.top { padding-top: 90px; padding-bottom: 90px; }
+.top__title { *zoom: 1; }
+.top__title:after { content: ""; display: table; clear: both; }
+.top__title p { color: #546e7a; }
+.top__title h2 { float: left; margin-top: 10px; font-family: "Museo Sans 700", Arial, sans-serif; font-size: 24px; color: #455a64; line-height: 30px; }
+.top__title h2 + p { float: right; margin-top: 10px; font-family: "Museo Sans 500", Arial, sans-serif; line-height: 30px; }
+.top__title h2 + p span { color: #30c6a5; }
+.top__inner { margin-top: 35px; }
+.top__inner li { display: table; padding: 15px; border-top: 1px solid #e0e7ee; border-left: 1px solid #e0e7ee; border-right: 1px solid #e0e7ee; -webkit-transition: all 0.3s; transition: all 0.3s; *zoom: 1; }
+.top__inner li:after { content: ""; display: table; clear: both; }
+.top__inner li:last-child { border-bottom: 1px solid #e0e7ee; }
+.top__inner li:hover { background-color: #e3f8f4; -webkit-transition: all 0.3s; transition: all 0.3s; }
+.top__inner li .top__in { display: table-cell; padding: 0 5px; font-family: "Museo Sans 500", Arial, sans-serif; font-size: 13px; color: #78909c; text-align: center; vertical-align: middle; }
+.top__inner li .top__in:nth-child(1) { width: 8%; }
+.top__inner li .top__in:nth-child(2) { width: 30%; }
+.top__inner li .top__in:nth-child(3) { width: 10%; }
+.top__inner li .top__in:nth-child(4) { width: 15%; }
+.top__inner li .top__in:nth-child(5) { width: 17%; }
+.top__inner li .top__in:nth-child(6) { width: 20%; }
+.top__inner li .top__in.top-name p { font-family: "Museo Sans 700", Arial, sans-serif; font-size: 18px; color: #455a64; letter-spacing: 0.04em; }
+.top__inner li .top__in.top-name p + p { font-family: "Museo Sans 300", Arial, sans-serif; font-size: 14px; color: #78909c; letter-spacing: 0.02em; }
+.top__inner li .top__in .profile-btn { display: inline-block; padding: 0 15px; font-size: 13px; color: #30c6a5; line-height: 26px; border: 1px solid #30c6a5; border-radius: 3px; }
+.top__inner li img { width: 51px; height: 51px; border-radius: 50%; }
+
+.teams__title p { color: #546e7a; }
+.teams__title h2 { margin-top: 8px; font-family: "Museo Sans 700", Arial, sans-serif; font-size: 24px; color: #455a64; }
+.teams__item { margin-top: 35px; -webkit-transition: all 0.3s; transition: all 0.3s; }
+.teams__item:hover { box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); -webkit-transition: all 0.3s; transition: all 0.3s; }
+.teams__img { position: relative; overflow: hidden; display: block; height: 200px; background-color: #455a64; }
+.teams__img > img { position: relative; bottom: 50%; left: -50%; opacity: 0.5; }
+.teams__el { position: absolute; top: 35%; left: 0; width: 100%; font-family: "Museo Sans 500", Arial, sans-serif; font-size: 18px; color: #fff; text-align: center; }
+.teams__el img { margin-bottom: 10px; }
+.teams__inner { font-family: "Museo Sans 500", Arial, sans-serif; color: #30c6a5; font-size: 13px; line-height: 41px; text-align: center; border-radius: 0 0 3px 3px; border-left: 1px solid #e0e7ee; border-right: 1px solid #e0e7ee; border-bottom: 1px solid #e0e7ee; }
+.teams__inner span + span { color: #78909c; }
+
+.reasons { position: relative; }
+.reasons__bg { position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: url("../img/reasons-bg.jpg") no-repeat left center; background-size: auto 100%; }
+.reasons__title p { color: #546e7a; }
+.reasons__title h2 { margin-top: 10px; font-family: "Museo Sans 700", Arial, sans-serif; font-size: 24px; color: #455a64; letter-spacing: 0.04em; }
+.reasons__list li { margin-top: 40px; }
+.reasons__list li h3 { font-family: "Museo Sans 700", Arial, sans-serif; font-size: 18px; color: #546e7a; letter-spacing: 0.04em; }
+.reasons__list li h3:before { content: ""; display: inline-block; margin-right: 10px; width: 19px; height: 25px; vertical-align: -2px; background-image: url("../img/reasons-icons.png"); background-repeat: no-repeat; background-position: 0 0; }
+.reasons__list li h3 + p { margin-top: 10px; color: #78909c; }
+.reasons__list li + li h3:before { height: 19px; background-position: 0 -25px; }
+.reasons__list li + li + li h3:before { height: 17px; background-position: 0 -44px; }
+
+.quotes { background-image: url("../img/quotes-bg.jpg"); background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.quotes p { display: block; padding-top: 200px; }
