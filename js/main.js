@@ -2,6 +2,15 @@ $(document).ready(function(){
 
 // Parallax
 	$('.header').parallax("50%", 0.4);
+	$('.quotes').parallax("50%", 0.2);
+
+// Slider
+	$('.quotes-slider').slick({
+		arrows: false,
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 7000
+	});
 
 // Clear placeholder
 	(function() {

@@ -23,6 +23,24 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-instagram:before {
+	content: "\e601";
+}
+.icon-dribbble:before {
+	content: "\e602";
+}
+.icon-pinterest:before {
+	content: "\e603";
+}
+.icon-twitter:before {
+	content: "\e604";
+}
+.icon-facebook:before {
+	content: "\e605";
+}
+.icon-behance:before {
+	content: "\e606";
+}
 .icon-vimeo-square:before {
 	content: "\e600";
 }
