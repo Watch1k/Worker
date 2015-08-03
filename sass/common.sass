@@ -35,6 +35,8 @@ a:hover, a:focus
 p
 	a
 		color: $green-light
+		&:hover, a:focus
+			color: darken($green-light,15)
 svg
 	width: 100%
 	height: 100%
@@ -77,6 +79,11 @@ body
 		border-radius: 3px
 		background-color: transparent
 		box-sizing: border-box
+		transition: all 0.2s
+		&:hover
+			color: $green-dark
+			background-color: #fff
+			transition: all 0.2s
 	.nav-main
 		float: right
 		margin-right: 15px
@@ -87,6 +94,13 @@ body
 			margin-right: 15px
 			font-size: 16px
 			line-height: 35px
+			a
+				border-bottom: 2px solid transparent
+				&:hover
+					border-bottom: 2px solid rgba(255,255,255,0.8)
+			&.is-active
+				a
+					border-bottom: 2px solid rgba(255,255,255,0.8)
 	&.fixed
 		position: fixed
 		top: 0
@@ -130,6 +144,8 @@ body
 		+background-image(linear-gradient(to top, rgba(7, 7, 7, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%))
 		box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1)
 		border-radius: 3px
+		&:hover
+			+background-image(linear-gradient(to top, rgba(7, 7, 7, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%))
 .find
 	margin-top: -60px
 	margin-bottom: 80px
@@ -181,6 +197,10 @@ body
 			letter-spacing: 0.08em
 			background-color: $green-light
 			border-radius: 3px
+			transition: all 0.2s
+			&:hover
+				background-color: darken($green-light,15)
+				transition: all 0.2s
 .search
 	color: #78909c
 	&__img
@@ -352,6 +372,11 @@ body
 					line-height: 26px
 					border: 1px solid $green-light
 					border-radius: 3px
+					transition: all 0.2s
+					&:hover
+						color: #fff
+						background-color: $green-light
+						transition: all 0.2s
 			img
 				width: 51px
 				height: 51px
@@ -532,7 +557,7 @@ body
 			color: $green-light
 		.col-1
 			.logo
-				display: block
+				display: inline-block
 				color: #546e7a
 			p
 				margin-top: 10px
@@ -548,6 +573,14 @@ body
 					width: 60%
 					background-color: #eaebed
 					border-radius: 3px 0 0 3px
+					transition: all 0.2s
+					&:focus
+						box-shadow: inset 0 0 5px $green-dark
+						transition: all 0.2s
+				fieldset
+					&.has-error
+						input
+							box-shadow: inset 0 0 5px #FF0000
 				button
 					float: left
 					width: 40%
@@ -555,8 +588,15 @@ body
 					text-transform: uppercase
 					background-color: $green-light
 					border-radius: 0 3px 3px 0
+					transition: all 0.2s
+					&:hover
+						background-color: darken($green-light,15)
+						transition: all 0.2s
+				.help-block
+					display: block
+					line-height: 1.5
 			.socials
-				margin-top: 25px
+				margin-top: 15px
 				padding: 0 30px
 				text-align: justify
 				li
@@ -571,6 +611,10 @@ body
 				color: #77939f
 				+ .col-text
 					margin-top: 20px
+		.col-2
+			li
+				a:hover
+					color: darken($green-light,15)
 	&__bot
 		padding-top: 20px
 		padding-bottom: 20px
@@ -585,3 +629,5 @@ body
 				color: #78909c
 				a
 					color: $green-light
+					&:hover
+						color: darken($green-light,15)

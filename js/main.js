@@ -69,35 +69,56 @@ $(document).ready(function(){
 	}).resize();
 
 // // ScrollTo
-// 	$(function(){
-// 	    $('.main-nav').onePageNav({
-// 			filter: ':not(.external)',
-// 			scrollThreshold: 0.25,
-// 			scrollSpeed: 1200,
-// 			easing: 'swing',
-// 			scrollOffset: 38
-// 		});
-// 	});
+	$(function(){
+		var headerH = $('.header__top').height();
+		console.log(headerH);
+	    $('.nav-main').onePageNav({
+	    	currentClass: 'is-active',
+			filter: ':not(.external)',
+			scrollThreshold: 0.5,
+			scrollSpeed: 1200,
+			easing: 'swing',
+			scrollOffset: headerH + 60
+		});
+	});
 
-// // js-inview
-// 	$('.js-inview').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
-// 		if (isInView) {
-// 				if (visiblePartY == 'top') {
-// 				// top part of element is visible
-// 			} else if (visiblePartY == 'bottom') {
-// 				// bottom part of element is visible
-// 			} else {
-// 				// whole part of element is visible
-// 			}
-// 		} else {
-// 			// element has gone out of viewport
-// 		}
-// 	});
+	$(window).scroll(function() {
+		if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+			$('.nav-main li.is-active').removeClass('is-active');
+			$('.nav-main li:last-child').addClass('is-active');
+		}
+	});
 
-// // WOW animation
-// 	new WOW().init();
-
-
+// Ajax Form
+	(function () {
+		$.validate({
+			validateOnBlur : true,
+			onSuccess : function() {
+				post_data = $('#form_newsletter').serialize();
+				
+				//Ajax post data to server
+				$.post('send.php', post_data, function(response){  
+				    if (response.type == 'error'){ //load json data from server and output message     
+				        output = '<div class="error">'+response.text+'</div>';
+				        $('#form_newsletter .submit-btn').text('Error');
+				        setTimeout(function(){
+				        	$('#form_newsletter button').text('Subscribe');
+				        }, 3000);
+				    }
+				    else {
+				        output = '<div class="success">'+response.text+'</div>';
+				        //reset values in all input fields
+				        $('#form_newsletter')[0].reset();
+				        $('#form_newsletter button').text('Done');
+				        setTimeout(function(){
+				        	$('#form_newsletter button').text('Subscribe');
+				        }, 3000);
+				    }
+				}, 'json');
+				return false;
+			}
+		});
+	}());
 
 // 60fps scrolling
 	var body = document.body,
