@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 // Parallax
-	$('.header').parallax("50%", 0.4);
+	$('.header').parallax("50%", 0.45);
 	$('.quotes').parallax("50%", 0.2);
 
 // Slider
@@ -113,4 +113,17 @@ $(document).ready(function(){
 	}, false);
 	
 	
+});
+
+// Window Scroll
+jQuery(window).scroll(function () {
+
+    'use strict';
+
+    if (jQuery(document).scrollTop() >= 1) {
+        $('.header__top').addClass('fixed');
+    } else {
+        $('.header__top').removeClass('fixed');
+    }
+
 });

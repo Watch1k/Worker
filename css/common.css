@@ -56,10 +56,12 @@ body { min-width: 320px; font-family: "Museo Sans 300", Arial, sans-serif; font-
 .logo { font-family: "Museo Sans 500", Arial, sans-serif; font-size: 30px; line-height: 35px; letter-spacing: 0; }
 .logo span { color: #1abc9c; }
 
-.header__top { position: fixed; z-index: 1000; top: 0; left: 0; right: 0; padding-top: 50px; }
+.header__top { position: fixed; z-index: 1000; top: 0; left: 0; right: 0; padding-top: 50px; -webkit-transition: all 0.3s; transition: all 0.3s; }
 .header__top .sign-btn { float: right; padding: 0 15px; font-size: 16px; line-height: 33px; letter-spacing: 0; border: 1px solid #fff; border-radius: 3px; background-color: transparent; box-sizing: border-box; }
 .header__top .nav-main { float: right; margin-right: 15px; letter-spacing: 0; }
 .header__top .nav-main li { display: inline-block; margin-left: 15px; margin-right: 15px; font-size: 16px; line-height: 35px; }
+.header__top.fixed { position: fixed; top: 0; left: 0; right: 0; padding-top: 2px; padding-bottom: 2px; background-color: #30c6a5; border-bottom: 2px solid #2bb194; box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); -webkit-transition: all 0.3s; transition: all 0.3s; }
+.header__top.fixed .logo span { color: #1c7461; }
 
 .header__bot { position: absolute; top: 40%; left: 0; right: 0; text-align: center; }
 .header__bot p { font-family: "Museo Sans 500", Arial, sans-serif; font-size: 16px; line-height: 24px; letter-spacing: 0.04em; text-shadow: 0 1px 7px rgba(7, 7, 7, 0.15); }
