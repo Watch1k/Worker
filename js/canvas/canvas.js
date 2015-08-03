@@ -239,12 +239,5 @@ var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof glo
     function getDistance(p1, p2) {
         return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
     }
-
-// Quotes CANVAS
- //    $('#quotes').particleground({
-	// 	dotColor: '#30c6a5',
-	// 	lineColor: '#30c6a5'
-	// });
-	// $('.quotes__in').css({ 'margin-top': -($('.quotes__in').height() / 2) });
     
 })();

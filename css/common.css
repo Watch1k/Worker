@@ -51,7 +51,7 @@ svg { width: 100%; height: 100%; }
 
 body { min-width: 320px; font-family: "Museo Sans 300", Arial, sans-serif; font-size: 14px; line-height: 1.3; letter-spacing: 0.02em; }
 
-.header { position: relative; color: #fff; min-height: 100%; background-image: url("../img/header-bg.jpg"); background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.header { overflow: hidden; position: relative; color: #fff; min-height: 100%; background-image: url("../img/header-bg.jpg"); background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
 .logo { font-family: "Museo Sans 500", Arial, sans-serif; font-size: 30px; line-height: 35px; letter-spacing: 0; }
 .logo span { color: #1abc9c; }
