@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+// menu toggle
+	$('#menu_toggle').on('click', function(){
+		$(this).toggleClass('is-active');
+		$('.nav-main').slideToggle();
+		$('.sign-btn').toggle();
+	});
+
 // Parallax
 	$('.header').parallax("50%", 0.45);
 	$('.quotes').parallax("50%", 0.2);
